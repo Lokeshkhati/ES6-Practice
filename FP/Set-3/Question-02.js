@@ -12,4 +12,5 @@ const cars = [
   
   const getCars = getCarDetails(cars);
   console.log(getCars);
-  // Output: [{ make: "Toyota", model: "Camry", year: 2015 }, { make: "Ford", model: "Mustang", year: 2018 }]
+//   // Output: [{ make: "Toyota", model: "Camry", year: 2015 }, { make: "Ford", model: "Mustang", year: 2018 }]
+
