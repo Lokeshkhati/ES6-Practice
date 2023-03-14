@@ -1,1 +1,1 @@
-# github-battle
+# ES6 + Practice
