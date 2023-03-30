@@ -55,12 +55,12 @@
 // Output: 3
 
 
-const students = [
-    { name: 'John', score: 80 },
-    { name: 'Jane', score: 90 },
-    { name: 'Bob', score: 75 },
-    { name: 'Alice', score: 85 },
-];
+// const students = [
+//   { name: 'John', score: 80 },
+//   { name: 'Jane', score: 90 },
+//   { name: 'Bob', score: 75 },
+//   { name: 'Alice', score: 85 },
+// ];
 
 
 // const getAverageScore = students => students.reduce((totalScore, currScore) => totalScore + currScore.score, 0) / students.length
@@ -80,14 +80,21 @@ const students = [
 // console.log(getAverageScore(students));
 
 
-  // Output: 82.5
+// Output: 82.5
 
 
-  const numbers = [12, 23, 4, 2, 11, 21] 
+// const numbers = [12, 23, 4, 2, 11, 21]
 // Your code here
 
+// const sumOfEvenNumbers = numbers => numbers.reduce((sum, number) => number % 2 === 0 ? sum + number : sum)
 
 
+// const sumOfEvenNumbers = numbers => {
+//   let sum = 0
+//   for (let number of numbers) if (number % 2 === 0) sum += number
 
-console.log(sumOfEvenNumbers(numbers))
+//   return sum
+// }
+
+// console.log(sumOfEvenNumbers(numbers))
 // Output: 18
