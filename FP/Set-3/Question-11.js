@@ -2,6 +2,6 @@
 
 const numbers = [12, 23, 4, 2, 11, 21]
 
-const sumOfEvenNumbers = numbers => numbers.filter((number) => number % 2 === 0).reduce((sum,number)=>sum+number,0)
+const sumOfEvenNumbers = numbers => numbers.reduce((sum, number) => number % 2 === 0 ? sum + number : sum)
 console.log(sumOfEvenNumbers(numbers))
 // Output: 18
