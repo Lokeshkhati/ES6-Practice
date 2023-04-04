@@ -2,16 +2,14 @@
 
 import { bouquet } from "../utils/bouquet";
 const BouquetCard = () => {
-  return (
-    <div>
-      <ol>
-        {bouquet
-          .filter(({ price }) => price > 2000)
-          .map(({ flowers }) =>
-            flowers.map((flower) => <li key={flower}>{flower} </li>)
-          )}
-      </ol>
-    </div>
+  return ( 
+    <ol>
+      {bouquet
+        .filter(({ price }) => price > 2000)
+        .map(({ flowers }) =>
+          flowers.map((flower) => <li key={flower}>{flower} </li>)
+        )}
+    </ol>
   );
 };
 export default BouquetCard;
