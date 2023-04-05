@@ -142,24 +142,61 @@
 
 
 // Given an array of objects representing employees, where each object has a name property, a department property, and a salary property, write a function that returns an object representing the total salary of each department. The keys of the object should be the department names, and the values should be the total salaries of all employees in that department.
-const employees = [
-    { name: 'Alice', department: 'Sales', salary: 50000 },
-    { name: 'Bob', department: 'Sales', salary: 60000 },
-    { name: 'Charlie', department: 'Marketing', salary: 55000 },
-    { name: 'David', department: 'Sales', salary: 70000 },
-    { name: 'Eve', department: 'Marketing', salary: 65000 },
-];
-const result = employees.reduce((acc, { department, salary }) => {
+// const employees = [
+//     { name: 'Alice', department: 'Sales', salary: 50000 },
+//     { name: 'Bob', department: 'Sales', salary: 60000 },
+//     { name: 'Charlie', department: 'Marketing', salary: 55000 },
+//     { name: 'David', department: 'Sales', salary: 70000 },
+//     { name: 'Eve', department: 'Marketing', salary: 65000 },
+// ];
+// const result = employees.reduce((acc, { department, salary }) => {
 
-    if (department === 'Sales') {
-        acc[department] = acc[department] + salary
-    }
-    else {
+//     if (department === 'Sales') {
+//         acc[department] = acc[department] + salary
+//     }
+//     else {
 
-        acc[department] = acc[department] + salary
-    }
+//         acc[department] = acc[department] + salary
+//     }
 
-    return acc
-}, { Sales: 0, Marketing: 0 })
-console.log(result);
-  // Output: {Sales: 180000, Marketing: 120000}
+//     return acc
+// }, { Sales: 0, Marketing: 0 })
+// console.log(result);
+//   // Output: {Sales: 180000, Marketing: 120000}
+
+
+// Given an array of strings, write a function that returns an object representing the frequency of each character in the array. The keys of the object should be the characters themselves, and the values should be the number of times the character appears in the array.
+
+
+// const strings = ['apple', 'banana', 'cherry'];
+// // console.log(strings);
+// const result = strings.reduce((acc, string) => {
+//     return { ...acc, [string[0]]: (acc[string] || 0) + 1 }
+// }, {})
+// console.log(result);
+// Output: { a: 4, p: 2, l: 1, e: 2, b: 1, n: 2, c: 1, h: 1, r: 2, y: 1}
+
+// function occurrencesOfEach(array) {
+//     const occurrences = array.reduce((accumulator, value) => {
+//       accumulator[value] = ++accumulator[value] || 1;
+
+//       return accumulator;
+//     }, {});
+
+//     return occurrences;
+//   }
+
+
+//   const result = occurrencesOfEach(strings);
+
+//   console.log(result); 
+
+const strings = ['Apple', 'Arrange', 'Cat', 'Dog']
+
+const countStrings = (strings) => {
+    let str = ''
+    for (let word of strings) if (word[0] === 'A') str += word
+    return str.length
+}
+
+console.log(countStrings(strings));
