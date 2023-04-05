@@ -191,12 +191,37 @@
 
 //   console.log(result); 
 
-const strings = ['Apple', 'Arrange', 'Cat', 'Dog']
 
-const countStrings = (strings) => {
-    let str = ''
-    for (let word of strings) if (word[0] === 'A') str += word
-    return str.length
-}
+// Q. length of string that starts with A
+// const strings = ['Apple', 'Arrange', 'Cat', 'Dog']
 
-console.log(countStrings(strings));
+// const countStrings = (strings) => {
+//     let str = ''
+//     for (let word of strings) if (word[0] === 'A') str += word
+//     return str.length
+// }
+
+// console.log(countStrings(strings)); 
+
+
+// const students = [
+//     { name: 'Alice', grades: [90, 95, 92] },
+//     { name: 'Bob', grades: [80, 85, 87] },
+//     { name: 'Charlie', grades: [92, 88, 94] },
+//     { name: 'David', grades: [75, 80, 82] },
+// ];
+
+// const result = students.map(({ name, grades }) => {
+//     const average = grades.reduce((acc, curr) => acc + curr)
+//         / grades.length
+
+//     return { name, average }
+// })
+// .filter(({ average }) => average > 90)
+
+// console.log(result);
+
+const strings = ['hello', 'world', 'how', 'are', 'you'];
+
+const lengthOfStrings=(strings)=>strings.reduce((acc,curr)=>acc+=curr.length,0)
+console.log(lengthOfStrings(strings))
