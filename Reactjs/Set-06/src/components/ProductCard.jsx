@@ -1,3 +1,4 @@
+// 1. Create a React component that calls the product api and has the same number of buttons as the items in product. On Click of each button show the details of that card only. Example: In the below API we have three products and three buttons.
 import { fakeFetch, url } from "../constants/fakeFetch01";
 import { useEffect, useState } from "react";
 
