@@ -8,6 +8,7 @@ import VideoList from "./components/VideosList";
 import PostsList from "./components/PostsList";
 import HabitTracker2 from "./components/HabitTracker2";
 import ProjectsList from "./components/ProjectsList";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <VideoList /> */}
       {/* <PostsList /> */}
       {/* <HabitTracker2 /> */}
-      <ProjectsList />
+      {/* <ProjectsList /> */}
+      <UserProfile />
     </div>
   );
 }

@@ -57,7 +57,6 @@ const ProjectsList = () => {
 
       {project?.title?.length > 0 && (
         <div>
-         
           <p>
             <strong>Name</strong> : {title}
           </p>
