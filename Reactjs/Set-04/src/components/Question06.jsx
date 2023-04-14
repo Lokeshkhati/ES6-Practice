@@ -3,8 +3,9 @@
 
 import { useState } from "react";
 import { booksData, genres } from "../constants/books";
+
 const BookCard = () => {
-  const [genre, setGenre] = useState("");
+  const [genre, setGenre] = useState("All");
 
   const filteredBooks =
     genre === "All"
@@ -22,7 +23,7 @@ const BookCard = () => {
       </div>
       <ul>
         {filteredBooks.map(({ id, title, genre, author }) => (
-          <li>
+          <li key={id}>
             <h2>{title} </h2>
             <p>{author} </p>
           </li>
