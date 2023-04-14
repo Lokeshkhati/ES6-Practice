@@ -1,5 +1,5 @@
 // 1. Create a React component that calls the product api and has the same number of buttons as the items in product. On Click of each button show the details of that card only. Example: In the below API we have three products and three buttons.
-import { fakeFetch, url } from "../constants/fakeFetch01";
+import { fakeFetch, url } from "../apis/fakeFetch01";
 import { useEffect, useState } from "react";
 
 const ProductCard = () => {
@@ -15,7 +15,6 @@ const ProductCard = () => {
     try {
       const { data } = await fakeFetch(url);
       setProducts(data.products);
-      setError("");
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
@@ -27,36 +26,38 @@ const ProductCard = () => {
     getProducts();
   }, []);
 
-  const filteredProducts = products.filter(
-    ({ name }) => name === selectedProduct
-  );
+  const filteredProducts =
+    selectedProduct === ""
+      ? products
+      : products.filter(({ name }) => name === selectedProduct);
+
+  if (error) return <h1>{error} </h1>;
+  if (isLoading) return <h1>Loading...</h1>;
+
   return (
     <div>
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <>
-          <div>
-            {names.map((name) => (
-              <button onClick={() => setSelectedProduct(name)}> {name} </button>
-            ))}
-          </div>
-          <ul>
-            {filteredProducts.map(({ name, price, desc, src, inStock }) => (
-              <li>
-                <img src={src} alt="" />
-                <h1> Name : {name} </h1>
-                <p>
-                  <strong>Price</strong> : Rs {price}
-                </p>
-                <p>
-                  <strong>Description</strong> : {desc}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      <>
+        <div>
+          <h1>Products :{products.length} </h1>
+          {names.map((name) => (
+            <button onClick={() => setSelectedProduct(name)}> {name} </button>
+          ))}
+        </div>
+        <ul>
+          {filteredProducts.map(({ name, price, desc, src, inStock }) => (
+            <li>
+              <img src={src} alt="" />
+              <h1> Name : {name} </h1>
+              <p>
+                <strong>Price</strong> : Rs {price}
+              </p>
+              <p>
+                <strong>Description</strong> : {desc}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </>
     </div>
   );
 };
