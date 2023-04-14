@@ -17,3 +17,6 @@ const getAverageAge = people => {
 
 console.log(getAverageAge(people));
   // Output: { averageAge: 32.5 }
+
+
+ 

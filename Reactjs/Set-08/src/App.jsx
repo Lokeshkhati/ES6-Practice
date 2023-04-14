@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/product/:productId" element={<ProductDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

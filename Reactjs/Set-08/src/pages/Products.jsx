@@ -1,5 +1,6 @@
 import { useProduct } from "../contexts/product-context";
 import Loader from "../components/Loader";
+import Product from "../components/Product";
 
 const Products = () => {
   const { products, isLoading, error } = useProduct();
@@ -12,25 +13,7 @@ const Products = () => {
       <h1>Products : {products.length} </h1>
       <ul className="product-list">
         {products.map((product) => (
-          <li className="product-card">
-            <h3>{product.name}</h3>
-            <p>
-              <strong>Description : </strong> {product.description}
-            </p>
-            <p>
-              <strong>Price : </strong>${product.price}
-            </p>
-            <p>
-              <strong>Quantity : </strong> {product.quantity}
-            </p>
-            <p>
-              <strong>Category : </strong> {product.category}
-            </p>
-            <p>
-              <strong>Brand : </strong> {product.brand}
-            </p>
-            <button className="cart-btn">Add to cart</button>
-          </li>
+          <Product key={product.id} product={product} />
         ))}
       </ul>
     </>

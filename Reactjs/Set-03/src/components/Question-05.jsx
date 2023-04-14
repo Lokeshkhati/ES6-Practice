@@ -8,6 +8,7 @@ const Vegetables = () => {
   const clickHandler = () => {
     setColor("green");
   };
+  
   return (
     <div>
       <button onClick={clickHandler}>Highlight Fresh Vegetables</button>

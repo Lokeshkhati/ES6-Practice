@@ -221,7 +221,17 @@
 
 // console.log(result);
 
-const strings = ['hello', 'world', 'how', 'are', 'you'];
+// const strings = ['hello', 'world', 'how', 'are', 'you'];
 
-const lengthOfStrings=(strings)=>strings.reduce((acc,curr)=>acc+=curr.length,0)
-console.log(lengthOfStrings(strings))
+// const lengthOfStrings=(strings)=>strings.reduce((acc,curr)=>acc+=curr.length,0)
+// console.log(lengthOfStrings(strings))
+
+// Given an array of objects representing students, use the reduce function to find the student name with the highest grade.
+
+// const students = [
+//   { name: 'Alice', grade: 85 },
+//   { name: 'Bob', grade: 70 },
+//   { name: 'Charlie', grade: 90 },
+//   { name: 'Dave', grade: 80 }
+// ];
+

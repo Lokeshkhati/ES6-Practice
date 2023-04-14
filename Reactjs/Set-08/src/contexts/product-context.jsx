@@ -6,6 +6,8 @@ const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   const getProducts = async (url) => {
     setIsLoading(true);
@@ -24,7 +26,17 @@ const ProductProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProductContext.Provider value={{ products, isLoading, error }}>
+    <ProductContext.Provider
+      value={{
+        products,
+        isLoading,
+        error,
+        cart,
+        setCart,
+        wishlist,
+        setWishlist,
+      }}
+    >
       {children}
     </ProductContext.Provider>
   );

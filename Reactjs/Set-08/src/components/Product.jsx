@@ -1,4 +1,5 @@
 import { useProduct } from "../contexts/product-context";
+import { Link } from "react-router-dom";
 const Product = ({ product }) => {
   const { id, description, price, name, quantity, category, brand } = product;
 
@@ -11,8 +12,8 @@ const Product = ({ product }) => {
   const addToWishlist = (product) => {
     setWishlist([product, ...wishlist]);
   };
+
   const isInCart = cart.find((product) => product.id === id);
-  console.log(isInCart);
 
   const removeFromCart = (id) => {
     const updatedCart = cart.filter((product) => product.id !== id);
@@ -37,6 +38,8 @@ const Product = ({ product }) => {
         <p>
           <strong>Brand : </strong> {brand}
         </p>
+
+        <Link to={`/product/${id}`}>visit item</Link>
         {/* {isInCart ? (
           <button className="cart-btn" onClick={() => removeFromCart(id)}>
             Remove from cart
