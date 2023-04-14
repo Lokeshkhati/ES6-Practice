@@ -1,19 +1,29 @@
-// 4.Create a React component that fetches a list of users from an API endpoint using useEffect hook and displays the name, email, and website of each user on the screen using the useState hook. Add a dropdown which filters the users by company name.
+//3.  Create a React component that fetches user data from an API endpoint using useEffect hook and displays the user's name, email, and phone number on the screen using the useState hook. Add a button which toggles the display of the user's address (street, suite, city, zipcode).
 
 import { useEffect, useState } from "react";
-import { fakeFetch, url, companies } from "../constants/fakeFetch04";
-
+import { fakeFetch, url } from "../constants/fakeFetch02";
 const UserCard = () => {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [selectedCompany, setSelectedCompany] = useState("All");
+  const [showAddress, setShowAddress] = useState(false);
 
-  const getUsers = async (url) => {
+  console.log(user);
+  const {
+    name,
+    email,
+    phone,
+    address: { street, suite, city, zipcode },
+  } = user;
+
+  useEffect(() => {
+    getUser(url);
+  }, []);
+  const getUser = async (url) => {
     setIsLoading(true);
     try {
       const { data } = await fakeFetch(url);
-      setUsers(data);
+      setUser(data);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
@@ -21,41 +31,25 @@ const UserCard = () => {
     }
   };
 
-  useEffect(() => {
-    getUsers(url);
-  }, []);
-
-  const filteredUsers =
-    selectedCompany === "All"
-      ? users
-      : users.filter(({ company }) => company === selectedCompany);
-
+  if (isLoading) return <h1> Loading... </h1>;
+  if (error) return <h1> {error} </h1>;
   return (
     <div>
-      {error && <h1>{error} </h1>}
-      {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <div>
-          <label>Filter By Company : </label>
-          <select onChange={(event) => setSelectedCompany(event.target.value)}>
-            <option value="All">All Companies</option>
-            {companies.map((company) => (
-              <option value={company}>{company} </option>
-            ))}
-          </select>
-          <ul>
-            {filteredUsers.map(({ name, email, website, company }) => (
-              <li key={name}>
-                <h3> {name} </h3>
-                <h3> {email} </h3>
-                <h3> {website} </h3>
-                <h3> {company} </h3>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <h1>User</h1>
+      <p> Name : {name} </p>
+      <p> Email : {email} </p>
+      <p> Phone : {phone} </p>
+      {showAddress && (
+        <>
+          <p> Street : {street} </p>
+          <p> City : {city} </p>
+          <p> Zipcode : {zipcode} </p>
+        </>
       )}
+
+      <button onClick={() => setShowAddress(!showAddress)}>
+        {showAddress ? "Hide Address" : "Show Address"}
+      </button>
     </div>
   );
 };
