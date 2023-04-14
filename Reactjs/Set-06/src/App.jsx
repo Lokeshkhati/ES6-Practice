@@ -9,6 +9,8 @@ import PostsList from "./components/PostsList";
 import HabitTracker2 from "./components/HabitTracker2";
 import ProjectsList from "./components/ProjectsList";
 import UserProfile from "./components/UserProfile";
+import VideoCard from "./components/VideoCard";
+import UserCard from "./components/UserCard";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
       {/* <PostsList /> */}
       {/* <HabitTracker2 /> */}
       {/* <ProjectsList /> */}
-      <UserProfile />
+      {/* <UserProfile /> */}
+      {/* <VideoCard /> */}
+      <UserCard />
     </div>
   );
 }
