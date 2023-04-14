@@ -22,6 +22,7 @@ const Quote = () => {
   useEffect(() => {
     getQuote();
   }, []);
+  
 
   return (
     <div>

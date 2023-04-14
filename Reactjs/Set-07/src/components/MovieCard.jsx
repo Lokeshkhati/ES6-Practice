@@ -1,4 +1,4 @@
-// 5.Create a React component that fetches a list of movies from an API endpoint using useEffect hook and displays the title, year, and genre of each movie on the screen using the useState hook. Add a dropdown which filters the movies by genre.
+// 6.Create a React component that fetches a list of movies from an API endpoint using useEffect hook and displays the title, year, and genre of each movie on the screen using the useState hook. Add a dropdown which filters the movies by genre.
 
 import { useEffect, useState } from "react";
 import { fakeFetch, url, genres } from "../constants/fakeFetch06";
