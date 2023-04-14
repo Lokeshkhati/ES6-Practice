@@ -7,12 +7,14 @@ import Quote from "./components/Quote";
 import Temperature from "./components/Temperature";
 import EmployeeCard from "./components/EmployeeCard";
 import UserCard from "./components/UserCard";
+import MovieCard2 from "./components/MovieCard2";
 
 function App() {
   return (
     <div className="App">
       {/* <Temperature /> */}
-      <UserCard />
+      {/* <UserCard /> */}
+      <MovieCard2 />
       {/* <EmployeeCard /> */}
       {/* <Quote /> */}
       {/* <MovieCard /> */}
