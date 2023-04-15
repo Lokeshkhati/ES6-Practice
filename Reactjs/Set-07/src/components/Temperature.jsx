@@ -50,7 +50,6 @@ const Temperature = () => {
     <div>
       <h1>Weather</h1>
       <p>
-        {" "}
         Temperature : {temperature} {isInCelsius ? "°C" : "°F"}
       </p>
       <p> Humidity : {humidity} % </p>
