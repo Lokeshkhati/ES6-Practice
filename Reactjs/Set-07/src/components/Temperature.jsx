@@ -1,6 +1,6 @@
 //1.  Create a React component that fetches weather data from an API endpoint using useEffect hook and displays the current temperature, humidity, and wind speed on the screen using the useState hook. Add a button which toggles between Celsius and Fahrenheit units for the temperature.
 
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { fakeFetch, url } from "../constants/fakeFetch01";
 const Temperature = () => {
   const [weather, setWeather] = useState([]);
