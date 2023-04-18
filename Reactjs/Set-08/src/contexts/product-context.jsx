@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { fakeFetch, url } from "../api/fakeFetch01";
+
 const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
