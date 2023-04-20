@@ -1,7 +1,7 @@
 //9.  Create a React component that calls the video api and display all the details of the video on the screen. And on click of add label button, add a label property to the object and display the details on the screen
 
 import { fakeFetch, url } from "../apis/fakeFetch09";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const VideoCard = () => {
   const [video, setVideo] = useState({});
@@ -33,7 +33,7 @@ const VideoCard = () => {
   };
 
   return (
-    <div>
+    
       <ul>
         <li>
           <img src={thumbnail} alt="" />
@@ -52,7 +52,8 @@ const VideoCard = () => {
           <button onClick={addLabelHandler}>Add Label</button>
         </li>
       </ul>
-    </div>
+
   );
 };
 export default VideoCard;
+
