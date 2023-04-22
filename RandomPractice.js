@@ -123,10 +123,8 @@ const countStrings = fruits => fruits.reduce((acc, fruit) => ({ ...acc, [fruit]:
 //   return count
 // }
 
-// console.log(false || 0 || undefined );
 
 console.log(countStrings(fruits));
-// Output: { 'apple': 3, 'banana': 3, 'cherry': 1 }
 
 
 
