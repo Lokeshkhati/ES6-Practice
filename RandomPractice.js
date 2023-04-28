@@ -105,11 +105,6 @@ const fruits = ['apple', 'banana', 'banana', 'cherry', 'apple', 'apple', 'banana
 
 const countStrings = fruits => fruits.reduce((acc, fruit) => ({ ...acc, [fruit]: (acc[fruit] || 0) + 1 }), {})
 
-// const countStrings = fruits => fruits.reduce((acc, fruit) => {
-//   return { ...acc, [fruit]: (acc[fruit] || 0) + 1 }
-// }, {})
-
-
 // const countStrings = fruits => {
 //   const count = {}
 //   for (let fruit of fruits) {
