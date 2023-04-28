@@ -1,6 +1,7 @@
 // 3.Create a React component that fetches a list of movies from an API endpoint using useEffect hook and displays the title, year, and rating of each movie on the screen using the useState hook. Add a dropdown which filters the movies by year. You can keep 5 dropdown values - 2005 to 2010.
 
-import { useEffect, useState } from "react";
+
+import { useEffect, useReducer, useState } from "react";
 import { fakeFetch, url, years } from "../constants/fakeFetch03";
 
 const MovieCard2 = () => {
@@ -61,3 +62,6 @@ const MovieCard2 = () => {
   );
 };
 export default MovieCard2;
+
+
+
