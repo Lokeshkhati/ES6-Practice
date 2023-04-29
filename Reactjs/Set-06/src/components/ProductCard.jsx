@@ -26,10 +26,9 @@ const ProductCard = () => {
     getProducts();
   }, []);
 
-  const filteredProducts =
-    selectedProduct === ""
-      ? products
-      : products.filter(({ name }) => name === selectedProduct);
+  const filteredProducts = selectedProduct
+    ? products.filter(({ name }) => name === selectedProduct)
+    : products;
 
   if (error) return <h1>{error} </h1>;
   if (isLoading) return <h1>Loading...</h1>;
