@@ -19,7 +19,6 @@ const VideoList = () => {
       setIsLoading(false);
     }
   };
-
   useEffect(() => {
     getVideos();
   }, []);
