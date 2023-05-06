@@ -9,12 +9,13 @@ import {
 function App() {
   return (
     <div className="App">
-      <ButtonFilter />
+      {/* <ButtonFilter />
       <CheckboxFilter />
-      <RadioFilter />
+      <RadioFilter /> */}
       <SearchFilter />
     </div>
   );
 }
 
 export default App;
+
