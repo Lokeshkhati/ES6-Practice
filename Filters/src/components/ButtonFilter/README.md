@@ -1,0 +1,7 @@
+0. Create a React app that displays a list of pets with their name, type, age, and owner. Implement three buttons for each pet type (e.g. cat, dog, bird) and filter the displayed list of pets to show only those of the selected type when the corresponding button is clicked, using the filter() function.
+
+1. Create a React app that displays a list of products with their name, price, category, and availability. Implement buttons for each product category (e.g. electronics, clothing, food) and filter the displayed list of products to show only those in the selected category when the corresponding button is clicked, using the filter() function.
+
+2. Create a React app that displays a list of books with their title, author, genre, and publication year. Implement buttons for each book genre (e.g. fiction, non-fiction, mystery) and filter the displayed list of books to show only those in the selected genre when the corresponding button is clicked, using the filter() function.
+
+3. Create a React app that displays a list of movies with their title, director, genre, and release year. Implement buttons for each movie genre (e.g. action, comedy, drama) and filter the displayed list of movies to show only those in the selected genre when the corresponding button is clicked, using the filter() function.

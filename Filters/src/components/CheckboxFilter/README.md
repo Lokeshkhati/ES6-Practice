@@ -1,0 +1,7 @@
+0. Create a React app that displays a list of restaurants with their name, cuisine, location, and rating. Implement a checkbox for each cuisine type (e.g. Italian, Mexican, Chinese) and filter the displayed list of restaurants to show only those that serve the selected cuisine type(s), using the filter() function.
+
+1. Create a React app that displays a list of job postings with properties like company, job title, location, and salary. Implement a checkbox for each job type (e.g. full-time, part-time, contract) and filter the displayed list of job postings to show only those with the selected job type(s), using the filter() function.
+
+2. Create a React app that displays a list of events with properties like name, date, location, and ticket price. Implement a checkbox for each event type (e.g. music, sports, theater) and filter the displayed list of events to show only those with the selected event type(s), using the filter() function.
+
+3. Create a React app that displays a list of workout routines with properties like name, duration, equipment needed, and difficulty level. Implement a checkbox for each equipment type (e.g. dumbbells, resistance bands, bodyweight) and filter the displayed list of workout routines to show only those with the selected equipment type(s), using the filter() function.
