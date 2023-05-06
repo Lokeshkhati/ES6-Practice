@@ -1,7 +1,9 @@
+import PetsList from "./PetsList";
+
 const ButtonFilter = () => {
   return (
     <div>
-      hello
+      <PetsList />
     </div>
   );
 };

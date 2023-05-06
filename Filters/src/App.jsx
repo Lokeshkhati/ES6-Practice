@@ -9,10 +9,10 @@ import {
 function App() {
   return (
     <div className="App">
-      {/* <ButtonFilter />
-      <CheckboxFilter />
-      <RadioFilter /> */}
-      <SearchFilter />
+      <ButtonFilter />
+      {/* <CheckboxFilter /> */}
+      {/* <RadioFilter />  */}
+      {/* <SearchFilter /> */}
     </div>
   );
 }
