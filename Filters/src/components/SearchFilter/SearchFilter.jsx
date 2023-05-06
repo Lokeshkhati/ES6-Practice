@@ -1,5 +1,6 @@
 import BooksList from "./BooksList";
 import EmployeeList from "./EmployeeList";
+import MovieList from "./MovieList";
 import ProductList from "./ProductList";
 
 const SearchFilter = () => {
@@ -7,7 +8,8 @@ const SearchFilter = () => {
     <>
       {/* <EmployeeList /> */}
       {/* <ProductList /> */}
-      <BooksList />
+      {/* <BooksList /> */}
+      <MovieList />
     </>
   );
 };
