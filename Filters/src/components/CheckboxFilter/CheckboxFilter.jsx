@@ -1,4 +1,10 @@
+import RestaurantsList from "./RestaurantsList";
+
 const CheckboxFilter = () => {
-  return <div>CheckboxFilter</div>;
+  return (
+    <div>
+      <RestaurantsList />
+    </div>
+  );
 };
 export default CheckboxFilter;

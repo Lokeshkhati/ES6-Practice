@@ -9,8 +9,8 @@ import {
 function App() {
   return (
     <div className="App">
-      <ButtonFilter />
-      {/* <CheckboxFilter /> */}
+      {/* <ButtonFilter /> */}
+      <CheckboxFilter />
       {/* <RadioFilter />  */}
       {/* <SearchFilter /> */}
     </div>
@@ -18,4 +18,3 @@ function App() {
 }
 
 export default App;
-
