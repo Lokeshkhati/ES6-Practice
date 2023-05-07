@@ -6,6 +6,7 @@ const RestaurantsList = () => {
 
   const checkboxHandler = (event) => {
     const { value, checked } = event.target;
+    
     checked
       ? setSelectedCuisines([...selectedCuisines, value])
       : setSelectedCuisines(
