@@ -18,7 +18,6 @@ const RestaurantsList = () => {
       ? restaurants.filter(({ cuisine }) => selectedCuisines.includes(cuisine))
       : restaurants;
 
-      console.log(selectedCuisines);
   return (
     <div>
       <h1>Restaurants</h1>
